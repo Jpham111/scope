@@ -6,6 +6,24 @@ Captures system audio via ScreenCaptureKit and renders it as a live XY (Lissajou
 
 No virtual audio drivers. No kernel extensions. Just plug in and play.
 
+> **[Download v1.0.0 →](https://github.com/Jpham111/scope/releases/latest)**
+
+---
+
+## Why I Built This
+
+I'm a music nerd. I love records, I love good speakers, and I love the obsessive little rituals around listening to music well.
+
+Somewhere along the way I started noticing people who paired their vinyl setups with vintage oscilloscopes — sitting next to the turntable, glowing green, drawing real-time Lissajous figures from the audio signal. It's a beautiful, useless detail. The trace doesn't make the music sound better. It just makes it feel like more is happening. Like the music is *visible*.
+
+I wanted that on my desk. But I didn't want to buy a CRT, find a stereo signal splitter, run cables across the room, and dedicate physical space to a thing I'd use casually.
+
+So I built the digital version: a real oscilloscope that lives on your desktop, taps directly into your system audio, and gives you the same hypnotic phosphor trace while you work, code, or just listen. Borderless floating window, always-on-top, four phosphor colors, light and dark mode — the kind of thing you set up once and then forget is even running until someone walks by and asks what it is.
+
+It's meant to be a fun, slightly indulgent way to visualize music while you work. Nothing more. Sometimes that's enough.
+
+---
+
 ## Features
 
 - **XY and Wave modes** — Lissajous figures or traditional waveform
@@ -21,9 +39,21 @@ No virtual audio drivers. No kernel extensions. Just plug in and play.
 ## Requirements
 
 - macOS 14.0 or later
+- Apple Silicon or Intel
 - Screen Recording permission (for system audio capture — no screen content is recorded)
 
-## Build
+## Install
+
+**Easy way — for everyone:**
+
+1. [Download the latest DMG](https://github.com/Jpham111/scope/releases/latest)
+2. Open the DMG and drag **Scope** to **Applications**
+3. Launch Scope and grant Screen Recording permission when prompted
+4. The app auto-detects the grant and relaunches — you're ready
+
+Signed with a Developer ID certificate and notarized by Apple. No Gatekeeper warnings, no terminal commands.
+
+**Build from source:**
 
 1. Clone the repo
 2. Open `Scope/Scope.xcodeproj` in Xcode
