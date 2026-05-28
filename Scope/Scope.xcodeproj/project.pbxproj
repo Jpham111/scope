@@ -15,6 +15,7 @@
 		53B9ECE92FB4D1A7003FA9D1 /* CaptureManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B9ECDA2FB4D1A7003FA9D1 /* CaptureManager.swift */; };
 		53B9ECEA2FB4D1A7003FA9D1 /* ScopeRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B9ECDD2FB4D1A7003FA9D1 /* ScopeRenderer.swift */; };
 		53B9ECEB2FB4D1A7003FA9D1 /* SystemAudioCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B9ECD82FB4D1A7003FA9D1 /* SystemAudioCapture.swift */; };
+		53ICON0012FB4D1A7003FA9D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53ICON0002FB4D1A7003FA9D1 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		53B9ECE02FB4D1A7003FA9D1 /* ScopeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScopeApp.swift; sourceTree = "<group>"; };
 		53B9ECE12FB4D1A7003FA9D1 /* ScopeDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScopeDisplayView.swift; sourceTree = "<group>"; };
 		53B9ECE22FB4D1A7003FA9D1 /* ScopeWindowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScopeWindowView.swift; sourceTree = "<group>"; };
+		53ICON0002FB4D1A7003FA9D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +46,7 @@
 		531394822FB4C91900A16898 = {
 			isa = PBXGroup;
 			children = (
+				53ICON0002FB4D1A7003FA9D1 /* Assets.xcassets */,
 				53B9ECD92FB4D1A7003FA9D1 /* AudioCapture */,
 				53B9ECDB2FB4D1A7003FA9D1 /* Capture */,
 				53B9ECDC2FB4D1A7003FA9D1 /* Info.plist */,
@@ -158,6 +161,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53ICON0012FB4D1A7003FA9D1 /* Assets.xcassets in Resources */,
 				53B9ECE42FB4D1A7003FA9D1 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,10 +309,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 5ANW4N5XYY;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -337,10 +344,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 5ANW4N5XYY;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;

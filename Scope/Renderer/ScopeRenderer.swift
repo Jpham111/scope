@@ -24,16 +24,45 @@ enum PhosphorColor: String, CaseIterable {
 }
 
 class ScopeSettings: ObservableObject {
-    @Published var mode: DisplayMode = .xy
-    @Published var phosphor: PhosphorColor = .green
-    @Published var persistence: CGFloat = 0.45
-    @Published var gain: CGFloat = 2.0
+    @Published var mode: DisplayMode = .xy {
+        didSet { UserDefaults.standard.set(mode.rawValue, forKey: "scope.mode") }
+    }
+    @Published var phosphor: PhosphorColor = .green {
+        didSet { UserDefaults.standard.set(phosphor.rawValue, forKey: "scope.phosphor") }
+    }
+    @Published var persistence: CGFloat = 0.45 {
+        didSet { UserDefaults.standard.set(Double(persistence), forKey: "scope.persistence") }
+    }
+    @Published var gain: CGFloat = 2.0 {
+        didSet { UserDefaults.standard.set(Double(gain), forKey: "scope.gain") }
+    }
     @Published var glowIntensity: CGFloat = 0.2
-    @Published var lightMode: Bool = false
+    @Published var lightMode: Bool = false {
+        didSet { UserDefaults.standard.set(lightMode, forKey: "scope.lightMode") }
+    }
 
     var bgR: CGFloat { lightMode ? 1.0 : 0.0 }
     var bgG: CGFloat { lightMode ? 1.0 : 0.0 }
     var bgB: CGFloat { lightMode ? 1.0 : 0.0 }
+
+    init() {
+        let d = UserDefaults.standard
+        if let m = d.string(forKey: "scope.mode"), let mode = DisplayMode(rawValue: m) {
+            self.mode = mode
+        }
+        if let p = d.string(forKey: "scope.phosphor"), let phosphor = PhosphorColor(rawValue: p) {
+            self.phosphor = phosphor
+        }
+        if d.object(forKey: "scope.persistence") != nil {
+            self.persistence = CGFloat(d.double(forKey: "scope.persistence"))
+        }
+        if d.object(forKey: "scope.gain") != nil {
+            self.gain = CGFloat(d.double(forKey: "scope.gain"))
+        }
+        if d.object(forKey: "scope.lightMode") != nil {
+            self.lightMode = d.bool(forKey: "scope.lightMode")
+        }
+    }
 }
 
 class ScopeRenderer {
